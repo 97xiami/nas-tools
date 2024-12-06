@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.18
 RUN apk add --no-cache libffi-dev \
     && apk add --no-cache $(echo $(wget --no-check-certificate -qO- https://raw.githubusercontent.com/97xiami/nas-tools/refs/heads/master/package_list.txt)) \
     && ln -sf /usr/share/zoneinfo/${TZ} /etc/localtime \
